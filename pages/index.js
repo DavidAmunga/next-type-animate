@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { CakeIcon } from '@heroicons/react/solid';
+import Typical from 'react-typical';
 
 export default function Home() {
   return (
@@ -17,12 +18,30 @@ export default function Home() {
             Pastros!
           </h1>
           <h3 className="font-mono text-back text-5xl">
-            A Bot that tweets about your favorite pastry recipes
+            A Bot that{' '}
+            <strong className="bg-blue-400 text-white">tweets</strong> about
+            your favorite{' '}
+            <strong className="bg-yellow-400">pastry</strong> recipes
           </h3>
-          <h4 className="text-5xl font-mono text-back">
-            Posts about{' '}
-            <span className="bg-yellow-500 rounded-sm px-2">Muffin Cakes</span>
-          </h4>
+          <div className="font-mono text-5xl flex space-x-3 ">
+            <h4> Posts about </h4>
+            <strong className="bg-yellow-400 px-1">
+              <Typical
+                steps={[
+                  'Cakes',
+                  1000,
+                  'Pies',
+                  1000,
+                  'Biscuits',
+                  1000,
+                  'Scones',
+                  1000,
+                ]}
+                wrapper="p"
+                loop={Infinity}
+              />
+            </strong>
+          </div>
         </div>
       </main>
     </div>

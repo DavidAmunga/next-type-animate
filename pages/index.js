@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-start justify-center min-h-screen py-2 bg-gray-100">
       <Head>
-        <title>Create Next App</title>
+        <title>Pastros | Type Text Animate Demo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
